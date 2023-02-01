@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+html, body {
+    height: 100%;
+}
+
+body{
+    background: rgb(54,77,204);
+    background: linear-gradient(180deg, rgba(54,77,204,1) 0%, rgba(38,57,166,1) 100%);
+    -color:#364dcc;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 3px solid white;
+    box-shadow: 0 0 20px white ;
+}
+
+h1{
+font-family: 'Architects Daughter', cursive;
+font-weight: 100;
+font-size: 24px;
+margin-bottom: 2px;
+}
+
+h2{
+font-size: 16px;
+/*margin-top: 2px;*/
+}
+
+.profile{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social{
+    display: flex;  /*comado que transforma a class em flex*/
+    justify-content: space-around; /* adiciona espaço ENTRE os conteúdos contidos nessa classes*/
+    list-style: none; /*retira a "formatação" padrão das listas (as bolinhas por exemplo)*/
+    margin: 20px 0;
+}
+
+.social img {
+width: 33px;
+}
+
+.link-list{
+    list-style: none;
+}
+
+.link-list li{
+    margin: 10px 20px;
+}
+
+.link-list li a {
+display: block;
+background: white;
+padding: 15px 20px;
+border-radius: 5px;
+text-decoration: none;
+color: rgb(54,77,204);
+font-weight: bold;
+}
+
+.link-list li a span{
+    color: grey;
+    display: block;
+    margin-top: 10px;
+}
+
+/* aula 1 linktree
+para importar arquivos de oura pastas,basta colocar o nome da pasta seguido de uma "/" e o nome do aquivo: "pasta/arquivo.jpeg" ou "pasta/arquivo.css"
+
+aula 2
+foi necessario informar a programação o tamanho do body e do html para que o backgroung ocupasse a tela inteira e não somente  "partes", feito através da regra "height".
+repare que as duas foram selecionadas para terem o mesmo atributo, foram escritas no mesmo comando separados apenas por uma vírgula, pode fazer issocom as classes também, como por exemplo:
+.title e .text
+.title, .text {
+    color: blue;
+}
+faz-se necessário anexar ou fazer a linkagem do google fonts antes do link de arquivo de css
+box shadow: 0 (primeiro numeroé na horizontal) 0 (segundo numero é na vertical)
+entao, se estão iguais, equilibrados, a sombra vai ficar ao redor do objeto por igual para todos os lados.
+o terceiro número que é o 20px tem a ver com o "espalhamento" da sombra
+
+aula 3 modo responsivo, profile social icons
+dentro do devtools existe uma ferramenta que simula a adaptação a diferentes tipos de tela, como de celulares por exemplo.
+foi citada uma nova regra que é a do RESET cujo simbolo ou o comando propriamente dito é o asterisco ( * ), que serve para aplicar a regra para TODAS as TAGS.
+
+foi usada uma regra alinhada/aninhada que é a .social img, onde usa-se a classe já criada com uma regra para todas as imagens contidas nela, atraves do comando       .classe (espaço) img, como const acima
+
+nesta aula foi passado a questão da forma certa de "formatar" a programação dos links das redes sociais, onde primeiramente foi usado a DIV para criar essa lista, onde os links ficavam um do lado do outro, mas a forma correta de se fazer isso é usando a <UL> e <LI>, mas dessa forma os links ficam em forma de lista, um em baixo do outro, então a forma mais correta/SEMÂNTICA é usar a lista junto com o flexbox (que é capaz de formatar o conteúdo corretamente).
+
+aula 4 introdução ao flexbox
+nesta aula foi explicado alguns comando do flexbox e como transformar a tag em flex, no caso foi a class .social, onde basta abrir o comando "display:" e selecionar a regra "flex"
+
+aula 5 caixas, inline vs block, span
+nessa aula foram feitas as caixas brancas com seus contéudos através da tag UL e LI, que serve para fazer listas, essas caixas brancas na verdade são botões (links) que servem para abrir uma outra página, entao foi usado a tag ANCORA (a).
+foi criada uma classe link-list e a partir dele foram acrescentados SELETORES que servem para chegar ao item desejado como por exemplo a tag ANCORA que  foi citada no final do comando da linha 62. 
+em se tratando de estilização de botões, então devemos fazer isso a partir da ta ancora, estiliza-la.
+foi adicionado o comando DISPLAY porque a tag ancora é uma tag IN LINE por padrão, ou seja, o contéudo tende a ficar todo na mesma linha, deve transforma-la em BLOCO, com o comando DISPLAY: BLOCK
+A estilização externa dos botões foi feita na fonte que é a tag responsavel por eles, a LI (linha 58), assim todas as li dentro dessa classe terão as mesmas configurações.
+a tag text-decoration: none serve para remover o under line dos textos dos links, comando feito diretamente no seletor da tag ANCORA (linha 62) assim todas as tags ancoras dentro da classe link-list terão as mesmas configurações.
+foi apresentada a tag SPAN, que serve para selecionar algo (nesse caso foi o texto) e poder esiliza-lo com o CSS, ou seja, sem valor semântico. Essa tag span é uma tag também IN LINE, ou seja, tende a deixar tudo na mesma linha, então devemos usar o comando do display block para transformar em um bloco e poder configura-lo/estiliza-lo.
+
+aula 6 live server no celular e link para whats e telegram
+ensina como abrir a página que foi criada do linktree que esta hospedada aqui no pc, coloca o ip da máquina mais a porta que está localizada, nesse caso foi: 192.168.18.225:5500 (ip + porta, após dois pontos)
+foi ensinado comocolcoar link para quem clicar no link abrir uma conversa com voce ou acessar um grupo ou canal no telegram conforme as linhas 57 3 64 do HTML
+
+aula 7 criando conta no github
+é uma espécie de rede social para programadores, onde as empresas selecionam para contratos. Mostra também codigos abertos de empresas
+
